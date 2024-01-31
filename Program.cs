@@ -7,15 +7,8 @@ List<Testpr.Types.Task> tasks = new();
 // Read From Json:
 string jsonContent = File.ReadAllText("Data/Task.json"); //using vscode,
 
-var jsonTasks = JsonSerializer.Deserialize<List<JsonTask>>(jsonContent);
-if (jsonTasks != null)
-{
-    foreach (var jsonTask in jsonTasks)
-    {
-        var task = new Testpr.Types.Task(jsonTask.Title, jsonTask.Description, jsonTask.DueDate, jsonTask.CompletedDate, jsonTask.Priority);
-        tasks.Add(task);
-    }
-}
+ReadFromJson(jsonContent, tasks);
+
 
 
 var maxHeap = tasks.ToHeap(new TaskPriorityComparer());     // ToHeap method:
@@ -28,6 +21,21 @@ Console.WriteLine($"Top task:  {topPriorityTask.Title}\nLowest task:  {lowestPri
 
 
 
+// read from json method:
+void ReadFromJson(string jsonContent, List<Testpr.Types.Task> tasks)
+{
+
+    var jsonTasks = JsonSerializer.Deserialize<List<JsonTask>>(jsonContent);
+    if (jsonTasks != null)
+    {
+        foreach (var jsonTask in jsonTasks)
+        {
+            var task = new Testpr.Types.Task(jsonTask.Title, jsonTask.Description, jsonTask.DueDate, jsonTask.CompletedDate, jsonTask.Priority);
+            tasks.Add(task);
+        }
+    }
+
+}
 
 
 // ToHeap extention method:
@@ -46,4 +54,6 @@ public static class HeapLINQ
         return heap;
     }
 }
+
+
 
