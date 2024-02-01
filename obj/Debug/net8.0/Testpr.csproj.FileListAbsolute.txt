@@ -89,3 +89,4 @@ Z:/Desktop/Work/C#/ Bootcamp-E01/bin/Debug/net8.0/Data/Task.json
 /Users/mohammad/Desktop/Work/C#/Bootcamp-Heap/obj/Debug/net8.0/Testpr.pdb
 /Users/mohammad/Desktop/Work/C#/Bootcamp-Heap/obj/Debug/net8.0/Testpr.genruntimeconfig.cache
 /Users/mohammad/Desktop/Work/C#/Bootcamp-Heap/obj/Debug/net8.0/ref/Testpr.dll
+/Users/mohammad/Desktop/Work/C#/Bootcamp-Heap/obj/Debug/net8.0/Testpr.sourcelink.json
