@@ -22,7 +22,7 @@ Console.WriteLine($"Top task:  {topPriorityTask.Title}\nLowest task:  {lowestPri
 
 
 // read from json method:
-void ReadFromJson(string jsonContent, List<Testpr.Types.Task> tasks)
+static void ReadFromJson(string jsonContent, List<Testpr.Types.Task> tasks)
 {
 
     var jsonTasks = JsonSerializer.Deserialize<List<JsonTask>>(jsonContent);
